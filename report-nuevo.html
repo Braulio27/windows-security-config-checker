@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html lang='es'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Reporte de Configuración del Equipo</title>
+</head>
+
+<body class="bg-gray-100 text-sm text-gray-800 font-sans p-4">
+    <div class="mx-auto my-4 p-6 bg-white shadow-md rounded-md w-[8.5in] h-[11in] overflow-auto">
+        <h1 class="text-xl font-bold text-center mb-6 border-b pb-2">Reporte de Configuración del Equipo</h1>
+
+        <section class="mb-6">
+            <div class="grid grid-cols-4 gap-4">
+                <div>
+                    <h2 class="font-semibold text-gray-700 mb-2">Número de Serie del Equipo</h2>
+                    <p><strong>Serial:</strong> WLN465F</p>
+                </div>
+                <div>
+                    <h2 class="font-semibold text-gray-700 mb-2">Verificación de Servidores DNS</h2>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li> 10.0.4.3</li>
+                        <li> 192.168.40.53</li>
+                        <li> 192.168.40.153</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="font-semibold text-gray-700 mb-2">Estado de Unión a Dominio</h2>
+                    <p>El equipo está unido al dominio: <strong>lan.municarrillo.go.cr</strong></p>
+                </div>
+        
+                <div>
+                    <h2 class="font-semibold text-gray-700 mb-2">Nombre del Equipo</h2>
+                    <p>El nombre del equipo es: <strong>BRODRIGUEZV</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="font-semibold text-gray-700 mb-2">Direcciones IP del Adaptador Ethernet</h2>
+            <table class="table-auto w-full border border-gray-300 text-left">
+                <thead class="bg-gray-200">
+                    <tr>
+                        <th class="border px-2 py-1">Adaptador</th>
+                        <th class="border px-2 py-1">Tipo</th>
+                        <th class="border px-2 py-1">Dirección IP</th>
+                        <th class="border px-2 py-1">Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border px-2 py-1">Ethernet</td>
+                        <td class="border px-2 py-1">IPv6</td>
+                        <td class="border px-2 py-1">fe80::9568:417f:5ac1:9c29%11</td>
+                        <td class="border px-2 py-1">Estático</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-2 py-1">Ethernet</td>
+                        <td class="border px-2 py-1">IPv4</td>
+                        <td class="border px-2 py-1">169.254.63.17</td>
+                        <td class="border px-2 py-1">Estático</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="font-semibold text-gray-700 mb-2">Información de Red</h2>
+            <table class="table-auto w-full border border-gray-300 text-left">
+                <thead class="bg-gray-200">
+                    <tr>
+                        <th class="border px-2 py-1">Interfaz</th>
+                        <th class="border px-2 py-1">Dirección MAC</th>
+                        <th class="border px-2 py-1">Dirección Link-Local</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border px-2 py-1">Ethernet 2</td>
+                        <td class="border px-2 py-1">08-00-27-83-35-6D</td>
+                        <td class="border px-2 py-1">No encontrada</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="font-semibold text-gray-700 mb-2">Programas Instalados</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full border border-gray-300 text-left">
+                    <thead class="bg-gray-200">
+                        <tr>
+                            <th class="border px-2 py-1">Nombre</th>
+                            <th class="border px-2 py-1">Versión</th>
+                            <th class="border px-2 py-1">Publicador</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border px-2 py-1">Oracle VM VirtualBox Guest Additions 7.0.20</td>
+                            <td class="border px-2 py-1">7.0.20.163906</td>
+                            <td class="border px-2 py-1">Oracle and/or its affiliates</td>
+                        </tr>
+                        <tr>
+                            <td class="border px-2 py-1">Microsoft .NET Host - 8.0.13 (x64)</td>
+                            <td class="border px-2 py-1">64.52.27977</td>
+                            <td class="border px-2 py-1">Microsoft Corporation</td>
+                        </tr>
+                        <!-- Más filas... -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="font-semibold text-gray-700 mb-2">Impresoras Configuradas</h2>
+            <table class="table-auto w-full border border-gray-300 text-left">
+                <thead class="bg-gray-200">
+                    <tr>
+                        <th class="border px-2 py-1">Nombre de la Impresora</th>
+                        <th class="border px-2 py-1">Controlador</th>
+                        <th class="border px-2 py-1">Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border px-2 py-1">Microsoft Print to PDF</td>
+                        <td class="border px-2 py-1">Microsoft Print To PDF</td>
+                        <td class="border px-2 py-1">Estado desconocido</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="font-semibold text-gray-700 mb-2">Actualizaciones Pendientes</h2>
+            <table class="table-auto w-full border border-gray-300 text-left">
+                <thead class="bg-gray-200">
+                    <tr>
+                        <th class="border px-2 py-1">Descripción</th>
+                        <th class="border px-2 py-1">HotFix ID</th>
+                        <th class="border px-2 py-1">Instalada el</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border px-2 py-1">Update</td>
+                        <td class="border px-2 py-1">KB5049622</td>
+                        <td class="border px-2 py-1">2025-02-05</td>
+                    </tr>
+                    <!-- Más filas... -->
+                </tbody>
+            </table>
+        </section>
+
+        <section class="mb-4">
+            <h2 class="font-semibold text-gray-700 mb-2">Estado de FortiClient</h2>
+            <p>No se obtuvo ninguna salida del comando.</p>
+        </section>
+
+        <section class="mb-4">
+            <h2 class="font-semibold text-gray-700 mb-2">Unidades de Red Conectadas</h2>
+            <p>No se encontraron unidades de red conectadas en el equipo.</p>
+        </section>
+    </div>
+</body>
+
+</html>
