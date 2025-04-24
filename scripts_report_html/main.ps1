@@ -14,6 +14,10 @@ $scripts = @(
     ".\checkUpdates.ps1",
     ".\checkFortiClient.ps1",
     ".\checkNetworkDrives.ps1"
+    ".\checkOSVersion.ps1",
+    ".\checkServiceTag.ps1",
+    ".\checkLicense.ps1",
+    ".\checkGPOsApplied.ps1"
 )
 
 # Variable para almacenar el contenido HTML

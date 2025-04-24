@@ -1,0 +1,39 @@
+# Archivos de compilación y salidas de Maven
+/target/
+/pdfconverter/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Configuración específica del IDE (Eclipse, IntelliJ, VSCode, etc.)
+*.iml
+.idea/
+*.classpath
+*.project
+*.settings/
+.vscode/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos generados
+*.log
+*.pdf
+*.xml
+*.html
+
+# Sistema operativo Linux/Unix
+*~
+
+# Sistema operativo Windows
+*.bak
+*.tmp
+desktop.ini
+
+# Archivos personales o temporales
+*.swp
+*.swo
+*.orig
+
+# Archivos ocultos de prueba
+/test-output/
+123Borrar
