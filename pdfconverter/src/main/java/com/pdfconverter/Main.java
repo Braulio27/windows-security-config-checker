@@ -8,8 +8,8 @@ import org.xhtmlrenderer.pdf.ITextRenderer;
 public class Main {
     public static void main(String[] args) {
 
-                // Ruta al archivo XHTML
-        String inputPath = "/home/b_rodriguez@lan.municarrillo.go.cr/Scripts/Revisar equipo/report.xml";
+                // Ruta al archivo HTML que deseas convertir
+        String inputPath = "C:\\Users\\b_rodriguez\\Desktop\\code\\windows-security-config-checker\\scripts_report_html\\report.html";
         
         try {
             // Verifica si el archivo existe

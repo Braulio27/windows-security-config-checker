@@ -9,7 +9,7 @@ if ($pendingUpdates) {
             <table class="min-w-full border border-gray-300 text-left">
                 <thead class="bg-gray-200">
                     <tr>
-                        <th class="border px-2 py-1">Descripción</th>
+                        <th class="border px-2 py-1">Descripci&#243;n</th>
                         <th class="border px-2 py-1">HotFix ID</th>
                         <th class="border px-2 py-1">Instalada el</th>
                     </tr>

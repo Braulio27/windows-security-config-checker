@@ -34,9 +34,33 @@ foreach ($line in $gpresultUser) {
     }
 }
 
-# Mostrar los resultados
-Write-Host "`nGPOs aplicadas al EQUIPO:"
-$gpoComputadora | ForEach-Object { Write-Host "- $_" }
+# Construir HTML
+$htmlOutput = @()
+$htmlOutput += '<section class="mb-6">'
+$htmlOutput += '  <h2 class="font-semibold text-gray-700 mb-2">Directivas de Grupo Aplicadas al Equipo</h2>'
+if ($gpoComputadora.Count -gt 0) {
+    $htmlOutput += '  <ul class="list-disc list-inside text-gray-800">'
+    foreach ($gpo in $gpoComputadora) {
+        $htmlOutput += "    <li>$gpo</li>"
+    }
+    $htmlOutput += '  </ul>'
+} else {
+    $htmlOutput += '  <p class="text-gray-600">No se encontraron directivas aplicadas al equipo.</p>'
+}
+$htmlOutput += '</section>'
 
-Write-Host "`nGPOs aplicadas al USUARIO:"
-$gpoUsuario | ForEach-Object { Write-Host "- $_" }
+$htmlOutput += '<section class="mb-6">'
+$htmlOutput += '  <h2 class="font-semibold text-gray-700 mb-2">Directivas de Grupo Aplicadas al Usuario</h2>'
+if ($gpoUsuario.Count -gt 0) {
+    $htmlOutput += '  <ul class="list-disc list-inside text-gray-800">'
+    foreach ($gpo in $gpoUsuario) {
+        $htmlOutput += "    <li>$gpo</li>"
+    }
+    $htmlOutput += '  </ul>'
+} else {
+    $htmlOutput += '  <p class="text-gray-600">No se encontraron directivas aplicadas al usuario.</p>'
+}
+$htmlOutput += '</section>'
+
+# Devolver resultado HTML
+Write-Output ($htmlOutput -join "`n")
