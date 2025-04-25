@@ -1,5 +1,5 @@
 ﻿# Obtener el Service Tag (número de serie) del equipo
-$serviceTag = (Get-WmiObject -Class Win32_BIOS).SerialNumber
+$serviceTag = wmic bios get serialnumber
 
 # Generar contenido HTML
 if ($serviceTag) {

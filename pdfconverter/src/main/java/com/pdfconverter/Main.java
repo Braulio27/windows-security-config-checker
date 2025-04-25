@@ -7,33 +7,31 @@ import org.xhtmlrenderer.pdf.ITextRenderer;
 
 public class Main {
     public static void main(String[] args) {
+        // Obtiene el directorio donde se ejecuta el JAR
+        String workingDir = System.getProperty("user.dir");
+        // Ruta al archivo HTML dentro del mismo directorio
+        String inputPath = workingDir + File.separator + "report.html";
 
-                // Ruta al archivo HTML que deseas convertir
-        String inputPath = "C:\\Users\\b_rodriguez\\Desktop\\code\\windows-security-config-checker\\scripts_report_html\\report.html";
-        
         try {
-            // Verifica si el archivo existe
             File htmlFile = new File(inputPath);
             if (!htmlFile.exists()) {
-                System.err.println("El archivo " + inputPath + " no se encontró. Asegúrate de que exista en el directorio.");
+                System.err.println("El archivo report.html no se encontró en el directorio de trabajo: " + workingDir);
                 return;
             }
 
-            // Convierte el archivo en una URL legible por Flying Saucer
             String url = htmlFile.toURI().toURL().toString();
 
-            // Inicializa ITextRenderer
             ITextRenderer renderer = new ITextRenderer();
-            renderer.setDocument(url); // <-- Este método es el adecuado para cargar desde archivo
+            renderer.setDocument(url);
             renderer.layout();
 
             // Ruta de salida del PDF
-            String outputFile = "output.pdf";
+            String outputFile = workingDir + File.separator + "output.pdf";
             try (OutputStream os = new FileOutputStream(outputFile)) {
                 renderer.createPDF(os);
             }
 
-            System.out.println("PDF generado correctamente desde archivo: " + outputFile);
+            System.out.println("PDF generado correctamente: " + outputFile);
         } catch (Exception e) {
             e.printStackTrace();
         }
