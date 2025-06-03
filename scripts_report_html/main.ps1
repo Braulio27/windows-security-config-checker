@@ -16,7 +16,7 @@ $scripts = @(
     ".\checkNetworkDrives.ps1"
     ".\checkOSVersion.ps1",
     ".\checkLicence.ps1",
-    ".\checkGPOsApplied.ps1"
+    ".\checkGPOsApplied.ps1",
 )
 
 # Variable para almacenar el contenido HTML
